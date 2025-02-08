@@ -20,6 +20,15 @@ fresh migrations:
 ./vendor/bin/sail artisan migrate:fresh --seed
 ```
 
+Test the endpoints:
+```sh
+curl -X POST http://localhost/api/bookings \
+    -d "service_id=1" \
+    -d "health_professional_id=1" \
+    -d "appointment_date=2025-12-10T15:30:00" \
+    -d "email=johndoe@example.com"
+```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
